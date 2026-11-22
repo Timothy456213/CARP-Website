@@ -1,19 +1,5 @@
-import type { Metadata } from "next";
-import { rules } from "@/lib/config";
-export const metadata: Metadata = { title: "Rules & Regulations" };
-
-export default function Rules() {
-  return (
-    <section className="wrap">
-      <h1>Rules &amp; Regulations</h1>
-      <ol className="rules">
-        {rules.map(([t, d], i) => (
-          <li key={t} className="card">
-            <span className="num">{String(i + 1).padStart(2, "0")}</span>
-            <div><h3>{t}</h3><p>{d}</p></div>
-          </li>
-        ))}
-      </ol>
-    </section>
-  );
+import ComingSoon from "@/components/ComingSoon";
+export const metadata = { title: "Support" };
+export default function Page() {
+  return <ComingSoon title="Support" phase="phase 4" text="Support requests and the staff review queue need the database. For help now, open a ticket in our Discord." />;
 }
